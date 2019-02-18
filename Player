@@ -12,7 +12,6 @@ public class PlayerController2d : MonoBehaviour
 
     private Rigidbody2D rb2d;
     private int count;
-    public GameObject Player;
 
 
     void Start()
@@ -38,8 +37,9 @@ public class PlayerController2d : MonoBehaviour
         rb2d.AddForce(movement * speed);
 
         if (Input.GetKey("escape"))
+        {
             Application.Quit();
-
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -60,7 +60,5 @@ public class PlayerController2d : MonoBehaviour
 
         if (count >= 12)
             winText.text = "You win!";
-        if (count = 12)
-            Destroy(Player);
     }
 }
